@@ -8,7 +8,7 @@ const MyTask = ({ refatch, setRefatch }) => {
     const [user] = useAuthState(auth);
     const [tasks, setTasks] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/tasks?email=${user?.email}`)
+        fetch(`https://frozen-caverns-05611.herokuapp.com/tasks?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [refatch, user])

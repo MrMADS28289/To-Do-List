@@ -17,7 +17,7 @@ const Add = ({ refatch, setRefatch }) => {
 
         const task = { title, description, type, email };
 
-        fetch('http://localhost:5000/task', {
+        fetch('https://frozen-caverns-05611.herokuapp.com/task', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

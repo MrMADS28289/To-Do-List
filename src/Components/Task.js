@@ -12,7 +12,7 @@ const tasks = ({ task, index, refatch, setRefatch }) => {
         const procced = window.confirm('Are you Sure?');
 
         if (procced) {
-            fetch(`http://localhost:5000/task/${id}`, {
+            fetch(`https://frozen-caverns-05611.herokuapp.com/task/${id}`, {
                 method: 'DELETE',
             })
                 .then((response) => response.json())
@@ -30,7 +30,7 @@ const tasks = ({ task, index, refatch, setRefatch }) => {
 
         const updatedTask = { title };
 
-        fetch(`http://localhost:5000/task/${id}`, {
+        fetch(`https://frozen-caverns-05611.herokuapp.com/task/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json',
