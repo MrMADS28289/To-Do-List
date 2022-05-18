@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Add from './Add';
 import MyTask from './MyTask';
 
 const ToDoApp = () => {
+
+    const [refatch, setRefatch] = useState(1);
+
+    console.log(refatch);
+
     return (
         <div>
-            <Add />
-            <MyTask />
+            <Add setRefatch={setRefatch} refatch={refatch} />
+            <MyTask setRefatch={setRefatch} refatch={refatch} />
         </div>
     );
 };
